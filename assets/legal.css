@@ -1,0 +1,54 @@
+:root {
+  --bg: #0e0e12;
+  --surface: #17171f;
+  --border: #2a2a36;
+  --text: #e7e7ee;
+  --muted: #9a9aa8;
+  --accent: #7c3aed;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  font-size: 16px;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+header.brand {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+}
+header.brand .logo {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #a855f7);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; color: #fff; font-size: 20px;
+}
+header.brand .name { font-weight: 700; font-size: 18px; }
+header.brand .name small { display: block; color: var(--muted); font-weight: 400; font-size: 13px; }
+.lang-toggle { display: inline-flex; gap: 4px; margin: 8px 0 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 4px; }
+.lang-toggle button {
+  border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 600;
+  padding: 6px 16px; border-radius: 7px; cursor: pointer;
+}
+.lang-toggle button.active { background: var(--accent); color: #fff; }
+h1 { font-size: 26px; margin: 0 0 4px; }
+h2 { font-size: 19px; margin: 32px 0 8px; }
+.meta { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+a { color: #b794f6; }
+p { margin: 10px 0; }
+ul { margin: 10px 0; padding-left: 22px; }
+li { margin: 4px 0; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; }
+footer { color: var(--muted); font-size: 13px; margin-top: 40px; text-align: center; }
+footer a { color: var(--muted); }
+[data-lang]:not(.show) { display: none; }
+.home-links { list-style: none; padding: 0; }
+.home-links li { margin: 12px 0; }
+.home-links a {
+  display: block; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 16px 18px; text-decoration: none; color: var(--text); font-weight: 600;
+}
+.home-links a span { display: block; color: var(--muted); font-weight: 400; font-size: 14px; margin-top: 2px; }
